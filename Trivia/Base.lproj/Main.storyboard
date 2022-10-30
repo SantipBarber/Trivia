@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -49,10 +48,10 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGO-NP-Dzs" userLabel="Question_View">
-                                        <rect key="frame" x="0.0" y="75" width="393" height="434"/>
+                                        <rect key="frame" x="0.0" y="75" width="393" height="419"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mount Everest is the world’s tallest peak" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXG-Ue-Kl6" userLabel="Question_Label">
-                                                <rect key="frame" x="20" y="20" width="353" height="394"/>
+                                                <rect key="frame" x="20" y="20" width="353" height="379"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -66,7 +65,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T14-nw-O3F" userLabel="ButtonsView">
-                                        <rect key="frame" x="0.0" y="524" width="393" height="180"/>
+                                        <rect key="frame" x="0.0" y="509" width="393" height="180"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3d7-Xh-wAz">
                                                 <rect key="frame" x="30" y="20" width="333" height="140"/>
@@ -74,12 +73,22 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drL-6l-ksr" userLabel="True_Button">
                                                         <rect key="frame" x="0.0" y="0.0" width="333" height="60"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="True"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="True">
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="trueButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BsL-xs-93M"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYB-ZD-zyG" userLabel="False_Button">
                                                         <rect key="frame" x="0.0" y="80" width="333" height="60"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="False"/>
+                                                        <buttonConfiguration key="configuration" style="tinted" title="False">
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="FalseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5eR-FP-npD"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -92,11 +101,22 @@
                                             <constraint firstItem="3d7-Xh-wAz" firstAttribute="leading" secondItem="T14-nw-O3F" secondAttribute="leading" constant="30" id="YKt-8c-KZK"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yp-IB-rmB" userLabel="Progress_View">
-                                        <rect key="frame" x="0.0" y="719" width="393" height="40"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="9yp-IB-rmB" userLabel="Progress_View">
+                                        <rect key="frame" x="0.0" y="704" width="393" height="55"/>
+                                        <subviews>
+                                            <progressView opaque="NO" contentMode="bottom" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QxV-yS-olB">
+                                                <rect key="frame" x="20" y="20" width="353" height="16"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="15" id="SVC-Wz-DeM"/>
+                                                </constraints>
+                                            </progressView>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="jlS-gZ-RRM"/>
+                                            <constraint firstItem="QxV-yS-olB" firstAttribute="top" secondItem="9yp-IB-rmB" secondAttribute="top" constant="20" symbolic="YES" id="5Bw-c2-vJt"/>
+                                            <constraint firstAttribute="trailing" secondItem="QxV-yS-olB" secondAttribute="trailing" constant="20" symbolic="YES" id="KsU-s7-Zh2"/>
+                                            <constraint firstItem="QxV-yS-olB" firstAttribute="leading" secondItem="9yp-IB-rmB" secondAttribute="leading" constant="20" symbolic="YES" id="X5F-ry-ube"/>
+                                            <constraint firstAttribute="bottom" secondItem="QxV-yS-olB" secondAttribute="bottom" constant="20" symbolic="YES" id="n4A-Ui-uGA"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -113,6 +133,9 @@
                     </view>
                     <connections>
                         <outlet property="falseButton" destination="eYB-ZD-zyG" id="pb3-uS-uct"/>
+                        <outlet property="progressView" destination="9yp-IB-rmB" id="oQ7-P5-blv"/>
+                        <outlet property="questionLabel" destination="wXG-Ue-Kl6" id="ZNJ-Uy-pbh"/>
+                        <outlet property="scoreLAbel" destination="8yS-ar-fgB" id="nwg-BC-aye"/>
                         <outlet property="trueButton" destination="drL-6l-ksr" id="WgF-xz-oKL"/>
                     </connections>
                 </viewController>
@@ -121,9 +144,4 @@
             <point key="canvasLocation" x="1.5384615384615383" y="3.5545023696682461"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

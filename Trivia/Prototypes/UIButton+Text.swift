@@ -17,9 +17,9 @@ extension UIButton {
     imageName: String = "",
     imagePadding: CGFloat = 6,
     imagePlacement:  NSDirectionalRectEdge = .leading,
-    cornerRadius: CGFloat = 50
+    cornerRadius: CGFloat = 50,
     //backgroundColor: UIColor = .,
-    //foregroundColor: UIColor = .white
+    foregroundColor: UIColor = .white
   ) {
     print(#function)
     var config = UIButton.Configuration.gray()
@@ -39,10 +39,10 @@ extension UIButton {
     //config.cornerStyle = .large
     // Outline
     config.background.cornerRadius = cornerRadius
-    config.background.strokeWidth = 20
+    config.background.strokeWidth = 10
     config.background.strokeColor = .white
 //    config.baseBackgroundColor = backgroundColor
-//    config.baseForegroundColor = foregroundColor
+    config.baseForegroundColor = foregroundColor
     
     // Inject config
     self.configuration = config
