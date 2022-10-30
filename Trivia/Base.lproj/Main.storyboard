@@ -20,21 +20,76 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Gw-5W-jfl" userLabel="Score_View">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="60"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KQV-8j-Fsq">
+                                                <rect key="frame" x="20" y="20" width="353" height="20"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Score: " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfi-ll-zY4" userLabel="TitleScore_Label">
+                                                        <rect key="frame" x="0.0" y="0.0" width="332.66666666666669" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yS-ar-fgB" userLabel="Score_Label">
+                                                        <rect key="frame" x="342.66666666666669" y="0.0" width="10.333333333333314" height="20"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="i3S-TE-zcz"/>
+                                            <constraint firstAttribute="bottom" secondItem="KQV-8j-Fsq" secondAttribute="bottom" constant="20" symbolic="YES" id="GwJ-KK-VZv"/>
+                                            <constraint firstAttribute="trailing" secondItem="KQV-8j-Fsq" secondAttribute="trailing" constant="20" symbolic="YES" id="S6S-43-1Bs"/>
+                                            <constraint firstItem="KQV-8j-Fsq" firstAttribute="top" secondItem="7Gw-5W-jfl" secondAttribute="top" constant="20" symbolic="YES" id="hpR-oQ-frK"/>
+                                            <constraint firstAttribute="height" constant="60" id="i3S-TE-zcz"/>
+                                            <constraint firstItem="KQV-8j-Fsq" firstAttribute="leading" secondItem="7Gw-5W-jfl" secondAttribute="leading" constant="20" symbolic="YES" id="vxu-VR-tLJ"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DGO-NP-Dzs" userLabel="Question_View">
-                                        <rect key="frame" x="0.0" y="55" width="393" height="454"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <rect key="frame" x="0.0" y="75" width="393" height="434"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mount Everest is the world’s tallest peak" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXG-Ue-Kl6" userLabel="Question_Label">
+                                                <rect key="frame" x="20" y="20" width="353" height="394"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wXG-Ue-Kl6" firstAttribute="top" secondItem="DGO-NP-Dzs" secondAttribute="top" constant="20" symbolic="YES" id="2lK-qu-n6M"/>
+                                            <constraint firstAttribute="bottom" secondItem="wXG-Ue-Kl6" secondAttribute="bottom" constant="20" symbolic="YES" id="73Q-wj-nvy"/>
+                                            <constraint firstAttribute="trailing" secondItem="wXG-Ue-Kl6" secondAttribute="trailing" constant="20" symbolic="YES" id="Eak-Bm-lWV"/>
+                                            <constraint firstItem="wXG-Ue-Kl6" firstAttribute="leading" secondItem="DGO-NP-Dzs" secondAttribute="leading" constant="20" symbolic="YES" id="TAC-pM-f8I"/>
+                                        </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T14-nw-O3F" userLabel="ButtonsView">
                                         <rect key="frame" x="0.0" y="524" width="393" height="180"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3d7-Xh-wAz">
+                                                <rect key="frame" x="30" y="20" width="333" height="140"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="drL-6l-ksr" userLabel="True_Button">
+                                                        <rect key="frame" x="0.0" y="0.0" width="333" height="60"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="True"/>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYB-ZD-zyG" userLabel="False_Button">
+                                                        <rect key="frame" x="0.0" y="80" width="333" height="60"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="False"/>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="3d7-Xh-wAz" secondAttribute="bottom" constant="20" symbolic="YES" id="1Wf-H6-7Cd"/>
+                                            <constraint firstAttribute="trailing" secondItem="3d7-Xh-wAz" secondAttribute="trailing" constant="30" id="7az-ed-ufl"/>
+                                            <constraint firstItem="3d7-Xh-wAz" firstAttribute="top" secondItem="T14-nw-O3F" secondAttribute="top" constant="20" symbolic="YES" id="ONh-IA-ylw"/>
                                             <constraint firstAttribute="height" constant="180" id="Tgj-Uq-sCs"/>
+                                            <constraint firstItem="3d7-Xh-wAz" firstAttribute="leading" secondItem="T14-nw-O3F" secondAttribute="leading" constant="30" id="YKt-8c-KZK"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9yp-IB-rmB" userLabel="Progress_View">
@@ -56,6 +111,10 @@
                             <constraint firstItem="yCb-E4-9MR" firstAttribute="bottom" secondItem="wn3-yP-NYx" secondAttribute="bottom" id="o6u-36-51t"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="falseButton" destination="eYB-ZD-zyG" id="pb3-uS-uct"/>
+                        <outlet property="trueButton" destination="drL-6l-ksr" id="WgF-xz-oKL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
