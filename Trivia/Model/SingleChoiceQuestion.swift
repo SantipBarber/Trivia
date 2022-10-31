@@ -10,5 +10,4 @@ import Foundation
 struct SingleChoiceQuestion {
   let question: String
   let answer: String
-  let size: String
 }

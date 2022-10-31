@@ -9,9 +9,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  // MARK: IBOutlets
   @IBOutlet weak var trueButton: UIButton!
   @IBOutlet weak var falseButton: UIButton!
-  
   @IBOutlet weak var scoreLAbel: UILabel!
   @IBOutlet weak var questionLabel: UILabel!
   @IBOutlet weak var progressView: UIView!
@@ -22,13 +22,9 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view.
   }
   
-  
-  @IBAction func trueButtonPressed(_ sender: UIButton) {
-    
-  }
-  
-  @IBAction func FalseButtonPressed(_ sender: UIButton) {
-    
+
+  @IBAction func answerButtonPressed(_ sender: UIButton) {
+    print("\(String(describing: sender.configuration?.title))")
   }
   
   private func configButtons() {

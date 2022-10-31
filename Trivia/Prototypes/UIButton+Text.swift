@@ -11,13 +11,13 @@ import UIKit
 extension UIButton {
   func cmButtonResponse(
     title: String,
-    titleFontSize: CGFloat = 28,
+    titleFontSize: CGFloat = 34,
     titleAlignment: UIButton.Configuration.TitleAlignment = .leading,
     titlePadding: CGFloat = 4,
     imageName: String = "",
     imagePadding: CGFloat = 6,
     imagePlacement:  NSDirectionalRectEdge = .leading,
-    cornerRadius: CGFloat = 50,
+    cornerRadius: CGFloat = 40,
     //backgroundColor: UIColor = .,
     foregroundColor: UIColor = .white
   ) {
@@ -39,7 +39,7 @@ extension UIButton {
     //config.cornerStyle = .large
     // Outline
     config.background.cornerRadius = cornerRadius
-    config.background.strokeWidth = 10
+    config.background.strokeWidth = 6
     config.background.strokeColor = .white
 //    config.baseBackgroundColor = backgroundColor
     config.baseForegroundColor = foregroundColor
