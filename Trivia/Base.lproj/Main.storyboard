@@ -133,7 +133,7 @@
                     </view>
                     <connections>
                         <outlet property="falseButton" destination="eYB-ZD-zyG" id="pb3-uS-uct"/>
-                        <outlet property="progressView" destination="9yp-IB-rmB" id="oQ7-P5-blv"/>
+                        <outlet property="progressView" destination="QxV-yS-olB" id="893-CC-4OE"/>
                         <outlet property="questionLabel" destination="wXG-Ue-Kl6" id="ZNJ-Uy-pbh"/>
                         <outlet property="scoreLAbel" destination="8yS-ar-fgB" id="nwg-BC-aye"/>
                         <outlet property="trueButton" destination="drL-6l-ksr" id="WgF-xz-oKL"/>

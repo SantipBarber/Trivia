@@ -12,10 +12,17 @@ struct TriviaBrain {
   private var currentQuestionIndex = 0
   
   // TODO: - checkAnswer()
-  func checkAnswer(_ userAnswer: String) -> Bool {
-    #warning("TODO: ipv_22_10_31 - checkAnswer(_:) body")
-    #warning("TODO: ipv_22_10_31 - Return no mock boolean")
-    return true
+  mutating func checkAnswer(_ userAnswer: String) -> Bool {
+    let actualAnswer = singleChoiceQuestions[currentQuestionIndex].answer
+    if userAnswer == actualAnswer {
+      print(" - Question \(currentQuestionIndex) is right")
+      score += 5
+      return true
+    } else {
+      print(" - Question \(currentQuestionIndex) is right")
+      score -= 10
+      return false
+    }
   }
   
   func getQuestionText() -> String {
@@ -24,9 +31,7 @@ struct TriviaBrain {
   
   // TODO: - getProgress()
   func getProgress() -> Float {
-    var progress = Float(getQuestionNumber())/Float(singleChoiceQuestions.count)
-    #warning("TODO: ipv_22_10_31 - Return no mock progress float")
-    return Float()
+    Float(currentQuestionIndex) / Float(singleChoiceQuestions.count)
   }
   
   func getQuestionNumber() -> Int {
@@ -34,10 +39,13 @@ struct TriviaBrain {
   }
   
   // TODO: - nextQuestion()
-  func nextQuestion() -> Bool {
-    #warning("TODO: ipv_22_10_31 - nextQuestion() body")
-    #warning("TODO: ipv_22_10_31 - Return no mock boolean")
-    return true
+  mutating func nextQuestion() -> Bool {
+    if currentQuestionIndex+1 < singleChoiceQuestions.count {
+      currentQuestionIndex += 1
+      return true
+    } else {
+      return false
+    }
   }
   
   mutating func startGame() {
